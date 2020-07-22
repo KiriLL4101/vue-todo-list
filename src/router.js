@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from '@/views/Home'
+import Setting from '@/views/SettingNotes'
 
 Vue.use(Router)
 
@@ -8,7 +10,13 @@ export default new Router({
     routes:[
         {
             path:'/',
-            component:"Home"
+            component:Home
+        },
+        {
+            path:'/setting/:id',
+            component:Setting,
+            name:'settingId',
+            props: true
         },
     ]
 })
